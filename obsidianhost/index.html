@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>ObsidianHost - Minecraft Server Hosting</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
@@ -13,38 +12,82 @@
       color: #ffffff;
       text-align: center;
     }
+
+    /* 🟪 Floating Square Banner */
+    .banner-animation {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #1a1a1a, #0e0e0e);
+      z-index: 1;
+    }
+
+    .square {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      animation: floatSquares 20s linear infinite;
+    }
+
+    .square.purple {
+      background-color: #9b59b6;
+    }
+
+    .square.black {
+      background-color: #000000;
+    }
+
+    @keyframes floatSquares {
+      0% {
+        transform: translateY(150px) translateX(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-200px) translateX(50px) rotate(360deg);
+      }
+    }
+
+    .square:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 18s; }
+    .square:nth-child(2) { left: 30%; animation-delay: 3s; animation-duration: 25s; }
+    .square:nth-child(3) { left: 50%; animation-delay: 6s; animation-duration: 20s; }
+    .square:nth-child(4) { left: 70%; animation-delay: 1s; animation-duration: 23s; }
+    .square:nth-child(5) { left: 90%; animation-delay: 2s; animation-duration: 21s; }
+
+    /* Header & Logo */
     .logo-bar {
       background: #1b1b1b;
       position: relative;
       padding: 2em 1em;
+      z-index: 2;
     }
+
     .gif-corner {
       position: absolute;
       top: 10px;
       left: 10px;
     }
+
     .gif-corner img {
-      height: 100px;
+      height: 180px;
     }
+
     .logo-center {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    nav a {
-      color: #9b59b6;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
     h1 {
       margin: 0;
       font-size: 2em;
     }
+
     main {
       padding: 2em;
     }
+
     .plans {
       display: flex;
       flex-wrap: wrap;
@@ -52,6 +95,7 @@
       gap: 1em;
       margin-bottom: 3em;
     }
+
     .plan {
       background: #2c2c2c;
       border-radius: 8px;
@@ -59,17 +103,21 @@
       width: 220px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .plan:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px #9b59b6;
     }
+
     .contact, .giveaway {
       margin: 3em auto;
       max-width: 600px;
     }
+
     a {
       color: #9b59b6;
     }
+
     footer {
       margin-top: 4em;
       padding: 1em;
@@ -80,20 +128,28 @@
 </head>
 <body>
 
- <header class="logo-bar">
-  <!-- INSERT GIF HERE -->
-  <div class="gif-corner">
-    <img src="assets/minecraft.gif" alt="Minecraft Icon">
+  <!-- 🟪 Animated Banner -->
+  <div class="banner-animation">
+    <div class="square purple"></div>
+    <div class="square black"></div>
+    <div class="square purple"></div>
+    <div class="square black"></div>
+    <div class="square purple"></div>
   </div>
 
-  <div class="logo-center">
-    <img src="assets/obsidianhost_logo_transparent.png" alt="ObsidianHost Logo" class="logo" height="80">
-    <h1>ObsidianHost</h1>
-  </div>
-</header>
-
+  <!-- Header with Logo + GIF -->
+  <header class="logo-bar">
+    <div class="gif-corner">
+      <img src="assets/minecraft.gif" alt="Minecraft Icon">
+    </div>
+    <div class="logo-center">
+      <img src="assets/obsidianhost_logo_transparent.png" alt="ObsidianHost Logo" class="logo" height="80">
+      <h1>ObsidianHost</h1>
+    </div>
+  </header>
 
   <main>
+    <!-- Budget Plans -->
     <section id="budget">
       <h2>Budget Plans (Ultra-Low RAM)</h2>
       <div class="plans">
@@ -105,6 +161,7 @@
       </div>
     </section>
 
+    <!-- Standard Plans -->
     <section id="plans">
       <h2>Standard Plans</h2>
       <div class="plans">
@@ -115,12 +172,14 @@
       </div>
     </section>
 
+    <!-- Giveaway -->
     <section id="giveaway" class="giveaway">
       <h2>🎁 Giveaway: Win a Free Obsidian Server!</h2>
       <p>Record a YouTube video showing your free-tier ObsidianHost server experience and submit it via our <a href="https://discord.gg/yourserver" target="_blank">Discord</a>.</p>
       <p>Each month, one creator wins a full <strong>Obsidian 8GB Plan</strong> for free — for a whole year!</p>
     </section>
 
+    <!-- Free Offers -->
     <section id="free" class="giveaway">
       <h2>🆓 Free Hosting Options</h2>
       <div class="plans">
@@ -141,6 +200,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="contact">
       <h2>Contact Us</h2>
       <p>Need help or have questions? Join us on <a href="https://discord.gg/yourserver" target="_blank">Discord</a>.</p>
@@ -152,4 +212,3 @@
   </footer>
 </body>
 </html>
-
