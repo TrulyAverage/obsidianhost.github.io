@@ -1,31 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>ObsidianHost - Minecraft Server Hosting</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      text-align: center;
+    }
+    .logo-bar {
+      background: #1b1b1b;
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      justify-content: space-between;
+    }
+    .logo-left {
+      display: flex;
+      align-items: center;
+    }
+    .logo-left img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    nav a {
+      color: #9b59b6;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    main {
+      padding: 2em;
+    }
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 3em;
+    }
+    .plan {
+      background: #2c2c2c;
+      border-radius: 8px;
+      padding: 1em 2em;
+      width: 220px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .plan:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #9b59b6;
+    }
+    .contact, .giveaway {
+      margin: 3em auto;
+      max-width: 600px;
+    }
+    a {
+      color: #9b59b6;
+    }
+    footer {
+      margin-top: 4em;
+      padding: 1em;
+      background: #1b1b1b;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="assets/obsidianhost_logo_transparent.png" alt="ObsidianHost Logo" class="logo">
-    <h1>ObsidianHost</h1>
-    <p class="tagline">Strong. Reliable. Minecraft-ready.</p>
+  <header class="logo-bar">
+    <div class="logo-left">
+      <img src="assets/minecraft.gif" alt="Minecraft Icon">
+      <img src="assets/obsidianhost_logo_transparent.png" alt="ObsidianHost Logo" class="logo">
+      <h1>ObsidianHost</h1>
+    </div>
+    <nav>
+      <a href="#budget">Budget Servers</a>
+      <a href="#plans">Value Plans</a>
+      <a href="#contact">Contact</a>
+      <a href="#giveaway">Giveaway</a>
+      <a href="https://discord.gg/yourserver" target="_blank">Discord</a>
+    </nav>
   </header>
+
   <main>
-    <section class="plans">
-      <h2>Choose Your Plan</h2>
-      <div class="plan"><h3>Stone</h3><p>1 GB RAM</p><p>$3.99/mo</p></div>
-      <div class="plan"><h3>Iron</h3><p>2 GB RAM</p><p>$6.99/mo</p></div>
-      <div class="plan"><h3>Gold</h3><p>4 GB RAM</p><p>$12.99/mo</p></div>
-      <div class="plan"><h3>Obsidian</h3><p>8 GB RAM</p><p>$29.99/mo</p></div>
+    <section id="budget">
+      <h2>Budget Plans (Ultra-Low RAM)</h2>
+      <div class="plans">
+        <div class="plan"><h3>Nano</h3><p>128 MB RAM</p><p>1vCPU | 1 player</p><p>MC 1.2.5, Cuberite</p><p>$0.10/mo</p></div>
+        <div class="plan"><h3>Micro</h3><p>256 MB RAM</p><p>1vCPU | 1–2 players</p><p>MC 1.8.8 / 1.12.2</p><p>$0.99/mo</p></div>
+        <div class="plan"><h3>Mini</h3><p>384 MB RAM</p><p>1vCPU | 2–3 players</p><p>MC 1.12.2 optimized</p><p>$1.49/mo</p></div>
+        <div class="plan"><h3>Lite</h3><p>512 MB RAM</p><p>1.5vCPU | 3–5 players</p><p>MC 1.16 / Fabric</p><p>$2.99/mo</p></div>
+        <div class="plan"><h3>Boost</h3><p>768 MB RAM</p><p>2vCPU | 5–8 players</p><p>Paper 1.18+, Purpur</p><p>$3.49/mo</p></div>
+      </div>
     </section>
-    <section class="contact">
+
+    <section id="plans">
+      <h2>Standard Plans</h2>
+      <div class="plans">
+        <div class="plan"><h3>Stone</h3><p>1 GB RAM</p><p>2vCPU</p><p>$3.99/mo</p></div>
+        <div class="plan"><h3>Iron</h3><p>2 GB RAM</p><p>2vCPU</p><p>$6.99/mo</p></div>
+        <div class="plan"><h3>Gold</h3><p>4 GB RAM</p><p>3vCPU</p><p>$12.99/mo</p></div>
+        <div class="plan"><h3>Obsidian</h3><p>8 GB RAM</p><p>4vCPU</p><p>$29.99/mo</p></div>
+      </div>
+    </section>
+
+    <section id="giveaway" class="giveaway">
+      <h2>🎁 Giveaway: Win a Free Obsidian Server!</h2>
+      <p>Record a YouTube video showing your free-tier ObsidianHost server experience and submit it via our <a href="https://discord.gg/yourserver" target="_blank">Discord</a>.</p>
+      <p>Each month, one creator wins a full <strong>Obsidian 8GB Plan</strong> for free — for a whole year!</p>
+    </section>
+
+    <section id="contact" class="contact">
       <h2>Contact Us</h2>
-      <p>Questions? Reach out on <a href="https://discord.gg/yourserver" target="_blank">Discord</a></p>
+      <p>Need help or have questions? Join us on <a href="https://discord.gg/yourserver" target="_blank">Discord</a>.</p>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 ObsidianHost. All rights reserved.</p>
   </footer>
