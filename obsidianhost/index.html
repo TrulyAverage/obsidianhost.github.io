@@ -15,18 +15,22 @@
     }
     .logo-bar {
       background: #1b1b1b;
-      display: flex;
-      align-items: center;
-      padding: 1em;
-      justify-content: space-between;
+      position: relative;
+      padding: 2em 1em;
     }
-    .logo-left {
-      display: flex;
-      align-items: center;
+    .gif-corner {
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
-    .logo-left img {
-      height: 60px;
-      margin-right: 15px;
+    .gif-corner img {
+      height: 100px;
+    }
+    .logo-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     nav a {
       color: #9b59b6;
@@ -75,16 +79,15 @@
   </style>
 </head>
 <body>
-  <header class="logo-bar">
-  <div class="gif-corner">
-    <img src="assets/minecraft.gif" alt="Minecraft Icon">
-  </div>
-  <div class="logo-center">
-    <img src="assets/obsidianhost_logo_transparent.png" alt="ObsidianHost Logo" class="logo" height="80">
-    <h1>ObsidianHost</h1>
-  </div>
-</header>
 
+  <header class="logo-bar">
+    <div class="gif-corner">
+      <img src="assets/minecraft.gif" alt="Minecraft Icon">
+    </div>
+    <div class="logo-center">
+      <img src="assets/obsidianhost_logo_transparent.png" alt="ObsidianHost Logo" class="logo" height="80">
+      <h1>ObsidianHost</h1>
+    </div>
   </header>
 
   <main>
@@ -116,25 +119,24 @@
     </section>
 
     <section id="free" class="giveaway">
-  <h2>🆓 Free Hosting Options</h2>
-  <div class="plans">
-    <div class="plan">
-      <h3>🎁 7-Day Free Trial</h3>
-      <p>Micro Plan – 256MB RAM</p>
-      <p>1vCPU | 24/7 uptime</p>
-      <p>Paper 1.8.8 or 1.12.2</p>
-      <p><strong>Free for 7 days</strong></p>
-    </div>
-    <div class="plan">
-      <h3>🤝 Referral Bonus</h3>
-      <p>Refer a friend who buys any 2GB+ plan</p>
-      <p>You both get a free 2GB server</p>
-      <p><strong>1 month free</strong></p>
-      <p>Use your referral code at checkout</p>
-    </div>
-  </div>
-</section>
-
+      <h2>🆓 Free Hosting Options</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>🎁 7-Day Free Trial</h3>
+          <p>Micro Plan – 256MB RAM</p>
+          <p>1vCPU | 24/7 uptime</p>
+          <p>Paper 1.8.8 or 1.12.2</p>
+          <p><strong>Free for 7 days</strong></p>
+        </div>
+        <div class="plan">
+          <h3>🤝 Referral Bonus</h3>
+          <p>Refer a friend who buys any 2GB+ plan</p>
+          <p>You both get a free 2GB server</p>
+          <p><strong>1 month free</strong></p>
+          <p>Use your referral code at checkout</p>
+        </div>
+      </div>
+    </section>
 
     <section id="contact" class="contact">
       <h2>Contact Us</h2>
@@ -147,3 +149,4 @@
   </footer>
 </body>
 </html>
+
