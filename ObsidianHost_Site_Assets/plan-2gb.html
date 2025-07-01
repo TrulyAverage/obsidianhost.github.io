@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – Standard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="images/ohhosttp.png" alt="ObsidianHost Logo">
+    <h1>REVIEW & CHECKOUT</h1>
+  </header>
+  <div class="checkout-container">
+    <div class="cart-box">
+      <h2>Product/Options</h2>
+      <table>
+        <tr><th>Product</th><th>Price/Cycle</th></tr>
+        <tr><td>Standard – 2GB RAM</td><td>$4.99</td></tr>
+      </table>
+      <div class="promo">
+        <input type="text" placeholder="Enter promo code if you have one">
+        <button class="btn">VALIDATE CODE</button>
+      </div>
+    </div>
+    <div class="summary-box">
+      <h2>ORDER SUMMARY</h2>
+      <p>Subtotal: <strong>$4.99</strong></p>
+      <p class="total">$4.99</p>
+      <small>Enjoy peace of mind with our 72-hour self-serve refund option—no questions asked!</small>
+      <form method="POST" action="https://checkout.stripe.com/pay">
+        <input type="hidden" name="plan_id" value="standard">
+        <button type="submit" class="btn">CHECKOUT →</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
