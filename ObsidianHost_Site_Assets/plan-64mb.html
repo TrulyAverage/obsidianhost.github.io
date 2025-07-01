@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – One Chunk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout – One Chunk</h1>
+  </header>
+  <div class="container">
+    <h2>64MB RAM - $0.05/month</h2>
+    <p>Shared vCPU<br>Ideal for: 1 Player<br>Version: 1.8–1.12.2</p>
+    <form method="POST" action="https://checkout.stripe.com/pay" style="margin-top:30px;">
+      <input type="hidden" name="plan_id" value="one chunk">
+      <button type="submit" class="btn">Proceed to Payment</button>
+    </form>
+  </div>
+</body>
+</html>

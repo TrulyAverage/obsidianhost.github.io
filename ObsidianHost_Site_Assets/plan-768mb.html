@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – Community</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout – Community</h1>
+  </header>
+  <div class="container">
+    <h2>768MB RAM - $1.50/month</h2>
+    <p>Shared vCPU<br>Ideal for: 4–6 Players<br>Version: 1.12–1.20</p>
+    <form method="POST" action="https://checkout.stripe.com/pay" style="margin-top:30px;">
+      <input type="hidden" name="plan_id" value="community">
+      <button type="submit" class="btn">Proceed to Payment</button>
+    </form>
+  </div>
+</body>
+</html>
