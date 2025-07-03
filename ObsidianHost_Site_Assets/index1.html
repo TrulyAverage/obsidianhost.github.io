@@ -176,6 +176,53 @@
       margin: 15px 0;
     }
 
+
+    /* --- Discord Banner Styles --- */
+    .discord-banner {
+        background-color: #4361ee; /* A nice blue color */
+        padding: 30px 40px;
+        margin: 60px auto 0;
+        max-width: 1200px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        gap: 20px; /* Adds space between items when they wrap */
+    }
+
+    .discord-banner .btn-discord {
+        background-color: #fff;
+        color: #4361ee;
+        padding: 12px 25px;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1em;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .discord-banner .btn-discord:hover {
+        background-color: #f0f0f0;
+    }
+
+    .discord-banner-text {
+        font-size: 1.1em;
+        font-weight: 600;
+        text-align: right;
+    }
+
+    /* Responsive adjustments for the banner */
+    @media (max-width: 768px) {
+        .discord-banner {
+            flex-direction: column;
+            text-align: center;
+        }
+        .discord-banner-text {
+            text-align: center;
+        }
+    }
+
     /* --- Footer Styles --- */
     footer {
       background: #111;
@@ -274,6 +321,14 @@
     </div>
   </section>
 
+      <!-- Discord Banner Section -->
+  <section class="section">
+    <div class="discord-banner">
+        <a href="https://discord.gg/your-invite-link" target="_blank" class="btn-discord">Join Our Discord</a>
+        <p class="discord-banner-text">Have questions or want to join the community? Join us on Discord!</p>
+    </div>
+  </section>
+  
   <footer>
     <p>&copy; 2025 ObsidianHost. All rights reserved.</p>
   </footer>
